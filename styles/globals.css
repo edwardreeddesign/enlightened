@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -23,4 +27,54 @@ a {
     color: white;
     background: black;
   }
+}
+
+.line {
+  @apply flex flex-col items-center justify-between w-7 h-[3px] bg-accent1 mb-[.3rem] duration-300 ease-in-out cursor-pointer transition-all z-50;
+}
+
+.line2 {
+  @apply w-5;
+}
+
+.line1-open {
+  @apply rotate-45 translate-x-0 translate-y-[6px];
+}
+
+.line2-open {
+  @apply hidden;
+}
+
+.line3-open {
+  @apply -rotate-45 translate-x-0 -translate-y-[2px];
+}
+
+.mobile-active {
+  @apply relative text-accent1 font-bold transition-all duration-300 ease-in;
+}
+.mobile-active::after {
+  content: '';
+  height: 3px;
+  background: hsl(20, 77%, 72%);
+  position: absolute;
+  bottom: -12%;
+  right: 0%;
+  width: 100%;
+}
+
+.active {
+  position: relative;
+  color: hsl(20, 77%, 72%);
+  font-weight: bold;
+  transition: all 350ms ease;
+}
+
+.active::after {
+  content: '';
+  height: 3px;
+  background: hsl(20, 77%, 72%);
+  position: absolute;
+  bottom: -20%;
+  right: 0%;
+  width: 100%;
 }
