@@ -4,6 +4,8 @@ import styles from '../styles/Home.module.css';
 import Layout from '../components/Layout';
 import { getPosts } from '../services';
 import PostCard from '../components/PostCard';
+import PostWidget from '../components/PostWidget';
+import CategoryWidget from '../components/CategoryWidget';
 
 export default function Home({ posts }) {
   return (
@@ -13,6 +15,12 @@ export default function Home({ posts }) {
           {posts.map((post, idx) => (
             <PostCard post={post.node} key={idx} />
           ))}
+        </div>
+        <div className="col-span1 lg:col-span-4">
+          <div className="relative top-8">
+            <PostWidget />
+            <CategoryWidget />
+          </div>
         </div>
       </main>
     </Layout>
