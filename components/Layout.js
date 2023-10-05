@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { ToastContainer } from 'react-toastify';
 import NavBar from './Header/NavBar';
-import Footer from './footer/Footer';
+import Footer from './Footer';
 
 const Layout = ({ title, children, description }) => {
   const defaultTitle = 'Light in the Darkness: A Masonic Odyssey';
