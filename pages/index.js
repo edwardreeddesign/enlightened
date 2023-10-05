@@ -10,7 +10,7 @@ import CategoryWidget from '../components/CategoryWidget';
 export default function Home({ posts }) {
   return (
     <Layout title="Home">
-      <main className="grid grid-cols-1 gap-12 mx-auto my-8 lg:grid-cols-12">
+      <main className="grid grid-cols-1 gap-12 px-12  lg:grid-cols-12 overflow-hidden">
         <div className="col-span-1 lg:col-span-8">
           {posts.map((post, idx) => (
             <PostCard post={post.node} key={idx} />

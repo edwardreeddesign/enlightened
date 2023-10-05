@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { ToastContainer } from 'react-toastify';
 import NavBar from './Header/NavBar';
+import Footer from './footer/footer';
 
 const Layout = ({ title, children, description }) => {
   const defaultTitle = 'Light in the Darkness: A Masonic Odyssey';
@@ -15,11 +16,12 @@ const Layout = ({ title, children, description }) => {
         <meta charSet="UTF-8" />
         <meta name="description" content={description || defaultDescription} />
       </Head>
+      <NavBar />
       <motion.div>
         <ToastContainer position="top-center" limit="1" />
-        <NavBar />
-        <section className="overflow-hidden">{children}</section>
+        <main className="overflow-hidden">{children}</main>
       </motion.div>
+      <Footer />
     </>
   );
 };

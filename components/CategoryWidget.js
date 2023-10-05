@@ -10,9 +10,9 @@ const CategoryWidget = () => {
   }, []);
 
   return (
-    <article className="rounded-xl p-8 mb-8 shadow-shadow1">
+    <article className="rounded-xl p-8 mb-20 shadow-shadow1">
       <h1
-        className="text-xl mb-2 font-thin
+        className="text-xl mb-2 font-extralight tracking-widest
       "
       >
         Categories
@@ -21,7 +21,7 @@ const CategoryWidget = () => {
         <Link
           key={category.slug}
           href={`/category/${category.slug}`}
-          className="cursor-pointer block pb-1 "
+          className="cursor-pointer block pb-1 text-xl"
         >
           {category.name}
         </Link>
